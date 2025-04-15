@@ -1,22 +1,10 @@
-import './style.css';
+(document.getElementById('formLogin') as HTMLFormElement)
 
-document.querySelector<HTMLDivElement>('nav')!.innerHTML = `
-   <img
-        src="public/lootboxlogo.svg"
-        alt="lootbox logo"
-        class="text-white text-2xl font-bold">
-      <img src="public/iconamoon_profile-fill.svg" alt="profile icon">
-`;
-
-const form = document.getElementById('formLogin') as HTMLFormElement;
-
-
-async function Login() {
+async function login() {
   const email = (document.getElementById('email') as HTMLInputElement).value;
   const password = (document.getElementById('password') as HTMLInputElement).value;
 
-  const url = `${import.meta.env.VITE_API_URL}/api/login`;
-  // const url = `http://localhost:3003/api/login`;
+  const url = `${import.meta.env.VITE_BACKEND_URL}/api/login`;
   console.log('url: ', url);
 
   try {
@@ -40,10 +28,13 @@ async function Login() {
       }
 }
 
-form.addEventListener('submit', async (e) => {
+
+(document.getElementById('formLogin') as HTMLFormElement)
+.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   console.log('submit');
-  await Login();
+  await login();
 });
+
 
