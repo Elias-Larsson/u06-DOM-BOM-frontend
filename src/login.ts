@@ -3,9 +3,7 @@
 async function login() {
   const email = (document.getElementById('email') as HTMLInputElement).value;
   const password = (document.getElementById('password') as HTMLInputElement).value;
-
   const url = `${import.meta.env.VITE_BACKEND_URL}/api/login`;
-  console.log('url: ', url);
 
   try {
     const response = await fetch(url, {
@@ -15,17 +13,21 @@ async function login() {
       },
       body: JSON.stringify({ email, password }),
     });
-    
+
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error(`Something went wrong when fetching data: ${response.status}`);
+      throw new Error(`Something went wrong when fetching data: ${data}`);
     }
     
-    const data = await response.json();
-    console.log('data: ', data);
+
+    document.cookie = `token=${data.accessToken}; path=/`;
+    window.location.href = "/index";
       } catch (error) {
-    
+        window.alert(error);
     console.log('Error: ', error);
       }
+
 }
 
 
