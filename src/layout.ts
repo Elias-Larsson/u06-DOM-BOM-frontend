@@ -2,7 +2,8 @@ import './style.css';
 
 document.querySelector<HTMLDivElement>('nav')!.innerHTML = `
    <img
-        src="lootboxlogo.svg"
+        src="public/lootboxlogo.svg"
         alt="lootbox logo">
-      <img src="iconamoon_profile-fill.svg" alt="profile icon">
+      <img src="public/iconamoon_profile-fill.svg" alt="profile icon">
 `;
+
