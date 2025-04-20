@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/svg+xml" href="/vite.svg">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="module" src="src/layout.ts" defer></script>
-        <title>Vite + TS</title>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="src/layout.ts" defer></script>
+    <title>Vite + TS</title>
+  </head>
   <body class="flex items-center flex-col bg-background-light">
-    <nav class="flex flex-row justify-between bg-background p-2 h-16 w-screen">
-    </nav>
-    <div class="flex flex-col justify-center items-center h-4/5 p-32">
+    <nav class="flex m-0 flex-row justify-between bg-background p-2 h-16 w-full"></nav>
+    <div class="flex flex-col justify-center items-center max-p-32 m-16">
       <h1 class="text-4xl text-white font-bold">Lootbox</h1>
       <div
-        class="flex flex-col w-4/5 bg-background rounded-3xl justify-center items-center">
+        class="flex flex-col bg-background rounded-3xl justify-center items-center"
+      >
         <img src="public/lootbox.svg" alt="lootbox">
-        <a href="#" class="inline-block text-center no-underline bg-primary rounded-2xl py-4 px-12 text-2xl">Open</a>
+        <a
+          href="#"
+          class="inline-block text-center no-underline bg-primary rounded-2xl py-4 px-12 text-2xl"
+          >Open</a
+        >
+      </div>
     </div>
-</div>
-      <div class="flex p-16 bg-background">
-          <div class="flex flex-col w-1/2 h-full justify-center items-center">
-              <h1 class="text-secondary text-2xl font-bold">What is LOOTBOX KILLA?</h1>
-              <p class="text-white text-lg">It’s a Lootbox API that lets users get items by opening loot boxes—no direct item purchases, just the luck of the draw! When a user opens a loot box, the API randomly selects an item based on its rarity, making each reward feel exciting and unpredictable. It’s a fun way to distribute items while keeping things fair and balanced.</p>
-              <img src="#" alt="picture">
-            </div>
-        </div>
+    <div class="flex p-16 bg-background">
+      <div class="flex flex-col h-full justify-center items-center">
+        <h1 class="text-secondary text-2xl font-bold">
+          What is LOOTBOX KILLA?
+        </h1>
+        <p class="text-white text-lg">
+          It’s a Lootbox API that lets users get items by opening loot boxes—no
+          direct item purchases, just the luck of the draw! When a user opens a
+          loot box, the API randomly selects an item based on its rarity, making
+          each reward feel exciting and unpredictable. It’s a fun way to
+          distribute items while keeping things fair and balanced.
+        </p>
+      </div>
+    </div>
   </body>
 </html>

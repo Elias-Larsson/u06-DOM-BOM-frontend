@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <script type="module" src="src/layout.ts" defer></script>
     <script type="module" src="src/login.ts" defer></script>
     <title>Document</title>
   </head>
   <body class="flex items-center flex-col bg-background-light">
-    <nav class="flex flex-row justify-between bg-background p-2 h-16">
-      </nav>
-      <div class="bg-white flex flex-col justify-center items-center w-156 h-96 m-32 rounded-2xl">
-        <h1 class="text-2xl">Login</h1>
-        <form id="formLogin" class="flex flex-col justify-center items-center">
-          <input class="bg-accent-light m-4 px-8 py-2 rounded" type="email" id="email" placeholder="email" required>
-          <input class="bg-accent-light m-4 px-8 py-2 rounded" type="password" id="password" placeholder="password" required>
-          <button class="inline-block text-center no-underline bg-primary rounded-2xl py-2 px-8 text-xl" type="submit">Login</button>
-          <p>Don't have an account? <a href="#">Sign up</a></p>
-        </form>
-      </div>
+    <nav
+      class="flex flex-row justify-between bg-background p-2 h-16 w-screen"
+    ></nav>
+    <div
+      class="bg-white flex flex-col justify-center items-center w-full max-w-156 h-96 my-32 rounded-2xl"
+    >
+      <h1 class="text-2xl">Login</h1>
+      <form id="formLogin" class="flex flex-col justify-center items-center">
+        <input
+          class="bg-accent-light m-4 px-8 py-2 rounded"
+          type="email"
+          id="email"
+          placeholder="email"
+          required
+        >
+        <input
+          class="bg-accent-light m-4 px-8 py-2 rounded"
+          type="password"
+          id="password"
+          placeholder="password"
+          required
+        >
+        <button
+          class="inline-block text-center no-underline bg-primary rounded-2xl py-2 px-8 text-xl"
+          type="submit"
+        >
+          Login
+        </button>
+        <p>Don't have an account? <a href="/register.html">Sign up</a></p>
+      </form>
+    </div>
   </body>
 </html>
